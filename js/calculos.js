@@ -24,6 +24,23 @@ btn_calcular.addEventListener("click", function(){
             return
         }
 
+        //Calcular que sean mayor a 0
+        if(precioProducto <= 0){
+            alert("Precio debe ser mayor a 0")
+            return
+        }
+        if(costoEnvio <= 0){
+            alert("Costo de envio debe ser mayor a 0")
+            return
+        }
+
+        //Envio debe ser menor a precio
+        if(costoEnvio >= precioProducto){
+            alert("Costo de envio debe ser menor al precio")
+            return
+        }
+
+
         precio_menos_porcentaje = precioProducto - (precioProducto * 0.04)
         precio_menos_envio = precio_menos_porcentaje - costoEnvio
         precio_menos_iva = precio_menos_envio - (precio_menos_envio/1.12)*0.12
