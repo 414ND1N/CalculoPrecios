@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora precios</title>
+    <!-- Icono -->
+    <link rel="icon" href="img/calculadora.png">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+
+    <div class='toggle-switch'>
+        <label>
+            <input type='checkbox' id='input_toggle'>
+            <span class='slider'></span>
+        </label>
+    </div>
+
+    <main>
+
+        <div class="principal">
+            <!-- Titulo -->
+            <p class="xlarge-bold-text">Calculadora de precios</p>
+            
+            <!-- Formulario -->
+            <label for="precio" class="label_info">Precio:</label>
+            <input type="number" id="precio" class="large-input">
+            
+            <label for="envio" class="label_info">Costo envío:</label>
+            <input type="number" id="envio" class="large-input">
+            
+            <div class="button-container">
+                <button type="button" id="btn_calcular">Calcular</button>
+            </div>
+
+
+            <div class="text-container">
+                <p id="calc1" class="small-text">Precio - 4%: Q0.00</p>
+                <p id="calc2" class="small-text">Precio - envio: Q0.00</p>
+                <p id="calc3" class="small-text">Precio - Iva: Q0.00</p>
+                <p id="calcfinal" class="large-bold-text">Precio final: Q0.00</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/darkmode.js"></script>
+    <script src="js/calculos.js"></script>
+</body>
+</html>
